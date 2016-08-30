@@ -11,7 +11,7 @@
 	"license": "SEE LICENSE IN LICENSE.md",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/johnpapa/vscode-angular2-snippets.git"
+		"url": "https://github.com/metasong/phaser-snippets.git"
 	},
 	"version": "0.5.3",
 	"engines": {
@@ -33,8 +33,8 @@
 		]
 	},
 	"__metadata": {
-		"id": "214cbfb9-7c06-4467-bad4-357ae83eb587",
-		"publisherId": "4434843a-4ebf-4f44-84f5-4176380c492d",
-		"publisherDisplayName": "johnpapa"
+		"id": "214cbfb9-7c06-4467-b6d4-3575e83eb577",
+		"publisherId": "4434843a-4ebf-4f44-8475-4176380c402d",
+		"publisherDisplayName": "metaseed"
 	}
 }
