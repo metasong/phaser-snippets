@@ -1,6 +1,6 @@
 {
     "Phaser Plugin": {
-        "prefix": "ps-plugin",
+        "prefix": "ps-plugin-singleton",
         "description": "phaser plugin snippet",
         "body": [
             "import * as Phaser from 'phaser';",
@@ -23,24 +23,50 @@
             "\t\t}",
             "\t\treturn ${PluginName}.instance;",
             "\t}",
-            "//",
-            "// Render is called right after the Game Renderer completes, but before the State.render.",
-            "// It is only called if visible is set to true.",
-            "//",
-            "render(): void {",
-            "\tsuper.render();",
-            "}",
+            "\t//",
+            "\t// Render is called right after the Game Renderer completes, but before the State.render.",
+            "\t// It is only called if visible is set to true.",
+            "\t//",
+            "\trender(): void {",
+            "\t\tsuper.render();",
+            "\t}",
             "",
-            "//",
-            "// Update is called after all the core subsystems (Input, Tweens, Sound, etc) and the State have updated,",
-            "// but before the render. It is only called if active is set to true.",
-            "//",
-            "update(): void{",
-                "\tsuper.update();",
-            "}",
+            "\t//",
+            "\t// Update is called after all the core subsystems (Input, Tweens, Sound, etc) and the State have updated,",
+            "\t// but before the render. It is only called if active is set to true.",
+            "\t//",
+            "\tupdate(): void{",
+                "\t\tsuper.update();",
+            "\t}",
             "${}",
             "}",
             ""
         ]
-    }
+    },
+    "State Part": {
+        "prefix": "ps-state-part",
+        "description": "",
+        "body": [
+            "import { SubState } from 'gamekit';",
+            "import * as Phaser from 'phaser';",
+            "",
+            "export interface ${Part}State extends Phaser.State {",
+            "",
+            "}",
+            "",
+            "export class ${Part} implements SubState {",
+            "",
+                "\tconstructor(private state: ${Part}State) {",
+                "",
+                "\t}",
+                "",
+                "\tinit() { ${}}",
+                "\tpreload() { }",
+                "\tcreate() { }",
+                "\tupdate() { }",
+                "",
+            "}",
+            ""
+        ]
+    } 
 }
